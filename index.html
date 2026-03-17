@@ -3,127 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-/* (mantido seu design e aprimorado responsivo) */
-:root{
-    --azul-prefeitura:#0B3D91;
-    --azul-claro:#1E63C6;
-    --verde:#1FAF38;
-    --amarelo:#F2C300;
-    --laranja:#F57C00;
-    --cinza-claro:#f5f7fa;
-    --cinza-borda:#d9dee7;
-}
-*{box-sizing:border-box}
-body{
-    margin:0;
-    background:linear-gradient(135deg,var(--azul-prefeitura),var(--azul-claro));
-    font-family:'Open Sans',sans-serif;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-    padding:16px;
-}
-.card{
-    background:white;
-    width:100%;
-    max-width:520px;
-    border-radius:12px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.15);
-    padding:28px 32px;
-}
-.header{text-align:center;margin-bottom:18px}
-.header h1{font-family:'Poppins';font-size:20px;color:var(--azul-prefeitura);margin:0}
-.header h2{font-family:'Poppins';font-size:16px;color:var(--verde);margin:4px 0 14px}
-.header p{font-size:13px;color:#555;margin:6px 0}
-
-.form-group{margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:600;color:var(--azul-prefeitura);margin-bottom:6px}
-
-input,select,textarea{
-    width:100%;padding:10px 12px;border-radius:6px;
-    border:1px solid var(--cinza-borda);
-    background:var(--cinza-claro);font-size:14px;
-}
-input:focus,select:focus,textarea:focus{
-    outline:none;border-color:var(--azul-claro);background:white;
-    box-shadow:0 0 0 3px rgba(30,99,198,0.15);
-}
-textarea{resize:vertical;min-height:80px}
-
-.btn{
-    width:100%;padding:12px;border:none;border-radius:8px;
-    font-size:15px;font-weight:600;font-family:'Poppins';
-    color:white;cursor:pointer;
-    background:linear-gradient(90deg,var(--laranja),var(--amarelo));
-}
-.btn:disabled{opacity:.7;cursor:not-allowed}
-
-.loading{display:none;text-align:center;font-size:13px;color:#666;margin-top:10px}
-
-.footer-bar{
-    height:6px;width:100%;margin-top:18px;border-radius:6px;
-    background:linear-gradient(90deg,var(--verde),var(--amarelo),var(--laranja),var(--azul-claro));
-}
-</style>
+<title>Balcão Virtual</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="card">
-<div class="header">
-<h1>Prefeitura Municipal de Cabo Frio</h1>
-<h2>Secretaria Municipal de Educação</h2>
-<p>Teleatendimento oficial</p>
+<div class="container">
+  <h1>Prefeitura Municipal</h1>
+  <h2>Balcão Virtual de Atendimento</h2>
+
+  <form id="formAtendimento">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="assunto" placeholder="Descreva o atendimento" required></textarea>
+    <button type="submit">Entrar na fila</button>
+  </form>
+
+  <div id="status" class="hidden">
+    ⏳ Você entrou na fila de atendimento.<br>
+    Aguarde receber o link da reunião por e-mail.
+  </div>
 </div>
 
-<form id="formAtendimento" method="POST" action="https://n8n.srv1352561.hstgr.cloud/webhook-test/balcao-virtual">
-<div class="form-group">
-<label>Nome</label>
-<input type="text" name="nome" required>
-</div>
-
-<div class="form-group">
-<label>E-mail</label>
-<input type="email" name="email" required>
-</div>
-
-<div class="form-group">
-<label>Setor</label>
-<select name="setor" required>
-<option value="">Selecione...</option>
-<option>Recursos Humanos</option>
-<option>Departamento Pessoal</option>
-<option>Tecnologia da Informação</option>
-<option>Financeiro</option>
-<option>Direção Escolar</option>
-</select>
-</div>
-
-<div class="form-group">
-<label>Mensagem</label>
-<textarea name="mensagem"></textarea>
-</div>
-
-<button class="btn" id="btnEnviar">Solicitar Atendimento</button>
-<div class="loading" id="loading">⏳ Enviando solicitação...</div>
-</form>
-
-<div class="footer-bar"></div>
-</div>
-
-<script>
-const form = document.getElementById('formAtendimento');
-const btn = document.getElementById('btnEnviar');
-const loading = document.getElementById('loading');
-
-form.addEventListener('submit', function(){
-    btn.disabled = true;
-    loading.style.display='block';
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
