@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
 
   try {
     // Note que removemos o "-test" para usar a URL de produção ativa
-    const response = await fetch('https://n8n.srv1352561.hstgr.cloud/webhook-teste/balcao-virtual', {
+    const response = await fetch('https://n8n.srv1352561.hstgr.cloud/webhook-test/balcao-virtual', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(dados)
