@@ -6,7 +6,7 @@ form.addEventListener('submit', async (e)=>{
 
   const dados = Object.fromEntries(new FormData(form));
 
-  await fetch('https://SEU_N8N/webhook/balcao-virtual', {
+  await fetch('https://n8n.srv1352561.hstgr.cloud/webhook-test/balcao-virtual', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify(dados)
