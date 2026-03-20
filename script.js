@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
+      alert("Você irá receber o link para o atendimento no e-mail indicado.");
       form.classList.add('hidden'); // Certifique-se de ter .hidden { display: none; } no CSS
       statusBox.classList.remove('hidden');
     } else {
