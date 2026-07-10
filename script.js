@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '2026-10-12', '2026-11-02', '2026-11-13', '2026-11-20', '2026-12-25'
     ];
 
-    const DIAS_BLOQUEADOS = [0, 3, 6]; // Dom, Qua, Sáb
+    const DIAS_BLOQUEADOS = [0, 6]; // Dom, Sáb
 
     function toISO(d) {
         return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
