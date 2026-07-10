@@ -6,32 +6,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balcão Virtual</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <div class="bg"></div>
-  <div class="container">
-    <img src="assets/logo.webp" alt="Logo Prefeitura" class="logo">
-    <h1>Prefeitura Municipal de Cabo Frio</h1>
-    <h2>Secretaria Municipal de Educação</h2>
-    <p>Teleatendimento oficial</p>
+
+<header>
+    <div class="header-inner">
+
+        <img src="assets/logo.webp" class="logo" alt="Logo">
+
+        <div class="header-middle">
+            <span>
+                Prefeitura Municipal de Cabo Frio
+                <br>
+                Secretaria Municipal de Educação
+            </span>
+        </div>
+
+    </div>
+
+    <div class="header-stripe"></div>
+</header>
+
+<main>
+
+    <div class="page-title">
+
+        <div class="page-icon icon-blue">
+
+            <!-- ícone -->
+
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <line x1="16" y1="3" x2="16" y2="7"></line>
+                <line x1="8" y1="3" x2="8" y2="7"></line>
+                <line x1="3" y1="11" x2="21" y2="11"></line>
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2>Teleatendimento Oficial</h2>
+
+            <p>Entre na fila de atendimento da Secretaria Municipal de Educação</p>
+
+        </div>
+
+    </div>
 
     <form id="formAtendimento">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="assunto" placeholder="Descreva o atendimento" required></textarea>
-      <button type="submit">Entrar na fila</button>
+
+        <div class="form-grid">
+
+            <div class="form-section">
+
+                <div class="section-title">
+                    DADOS PESSOAIS
+                </div>
+
+                <div class="field-group">
+
+                    <label>Nome</label>
+
+                    <input
+                        type="text"
+                        name="nome"
+                        placeholder="Seu nome"
+                        required>
+
+                </div>
+
+                <div class="field-group">
+
+                    <label>E-mail</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Seu e-mail"
+                        required>
+
+                </div>
+
+            </div>
+
+            <div class="form-section">
+
+                <div class="section-title">
+                    ATENDIMENTO
+                </div>
+
+                <div class="field-group">
+
+                    <label>Assunto</label>
+
+                    <textarea
+                        name="assunto"
+                        placeholder="Descreva o atendimento"
+                        required></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-footer">
+
+            <button type="submit" id="btnCarregar">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                </svg>
+
+                Entrar na fila
+
+            </button>
+
+        </div>
+
     </form>
 
-    <div id="status" class="hidden">
-      ⏳ Você entrou na fila de atendimento.<br>
-      Aguarde receber o link da reunião por e-mail.
-    </div>
-  </div>
+    <div id="status" class="success-msg hidden">
 
-  <script src="script.js"></script>
+        <div class="success-icon icon-green">
+
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+
+        </div>
+
+        <h3>Solicitação enviada</h3>
+
+        <p>
+            Você entrou na fila de atendimento.
+            Aguarde receber o link da reunião por e-mail.
+        </p>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 
 </html>
