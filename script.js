@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ════════════════════════════════════════════════════
     // CONSTANTES COMPARTILHADAS
     // ════════════════════════════════════════════════════
-    const BASE_URL = 'https://n8n.srv1352561.hstgr.cloud/webhook';
+    const BASE_URL = 'https://n8n.srv1352561.hstgr.cloud/webhook-test';
 
     const FERIADOS = [
         '2026-01-01', '2026-04-21', '2026-04-23', '2026-04-24',
