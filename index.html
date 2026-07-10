@@ -2,33 +2,32 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Balcão Virtual</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balcão Virtual - Atendimento Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/logo-brasão.png" type="image/png">
 </head>
-
 <body>
 
-<header>
-    <div class="header-inner">
-
-        <img src="assets/logo.webp" class="logo" alt="Logo">
-
-        <div class="header-middle">
-            <span>
-                Prefeitura Municipal de Cabo Frio
-                <br>
-                Secretaria Municipal de Educação
-            </span>
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <img src="assets/logo.webp" alt="Logo Prefeitura" class="logo">
+            <div class="header-center">
+                <p>Superintendência de Gestão de Pessoas</p>
+            </div>
+            <div class="header-text">
+                <h1>Cabo Frio</h1>
+                <p>Secretaria Municipal de Educação</p>
+            </div>
         </div>
-
-    </div>
-
-    <div class="header-stripe"></div>
-</header>
+        <div class="header-stripe"></div>
+    </header>
 
 <main>
 
@@ -51,102 +50,229 @@
 
             <h2>Teleatendimento Oficial</h2>
 
-            <p>Entre na fila de atendimento da Secretaria Municipal de Educação</p>
+            <p>Atendimento exclusivo aos Diretores das Unidades Escolares</p>
 
         </div>
 
     </div>
 
     <form id="formAtendimento">
+                <div class="form-grid">
 
-        <div class="form-grid">
+                    <!-- Dados pessoais -->
+                    <div class="form-section">
+                        <h3 class="section-title">Dados para o Agendamento</h3>
 
-            <div class="form-section">
+                        <div class="field-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="nome_escola">Assunto / Setor</label>
+                            <select name="nome_escola" id="nome_escola" required>
+                                <option value="">Selecione o unidade escolar</option>
+                              <option>ACHILLES ALMEIDA BARRETO (E. M. Prof.)</option>
+                              <option>AGRISA (E. M.)</option>
+                              <option>ALFREDINA OLIVEIRA FRANCESCONI (E. M. Prof.ª)</option>
+                              <option>ALFREDO CASTRO (E. M.)</option>
+                              <option>ALITTA MARIA DO VALLE (E. M. Prof.ª)</option>
+                              <option>AMÉLIA FERREIRA (E. M. Prof.ª)</option>
+                              <option>AMENA MAYALL (E.M. Prof.ª)</option>
+                              <option>AMÉRICA DOS ANJOS MONICA (E. M.)</option>
+                              <option>ANA PEREIRA GONÇALVES (E. M. E. I. Prof.ª)</option>
+                              <option>ANGELIM (E. E. Mz.)</option>
+                              <option>ANITA TEIXEIRA DA SILVA (E.M. E.I. Prof.ª)</option>
+                              <option>ANTONIO DA CUNHA AZEVEDO (E. M.)</option>
+                              <option>ARAÇÁ (E. M.)</option>
+                              <option>ARLETE ROSA CASTANHO (E. M.)</option>
+                              <option>Associação de Pais e Amigos dos Excepcionais (APAE)</option>
+                              <option>CARLOS ALBERTO GOMES DE CARVALHO (E. M. Prof.)</option>
+                              <option>CATHARINA DA SILVEIRA CORDEIRO (E. M . Prof.ª)</option>
+                              <option>CECILIA NOGUEIRA MACHADO GUIA (E. M. Prof.ª)</option>
+                              <option>CILÉA MARIA BARRETO (E. M. Prof.ª)</option>
+                              <option>CLADYR DA ROCHA MENDES (E. M.E.I.)</option>
+                              <option>CLÁUDIA MUZIO FREITAS DE OLIVEIRA (E. M. Prof.ª)</option>
+                              <option>CLEUSA GUIMARÃES FARIA BRAGA (E.M. E. I. Prof.ª)</option>
+                              <option>DALCY BARROSO PILLAR (E. M. E. I. Prof.ª)</option>
+                              <option>DEMERVAL ALVES RANGEL (E. M.)</option>
+                              <option>DEODORO AZEVEDO (E. M.)</option>
+                              <option>DOMINGOS GOUVÊA (E. M.)</option>
+                              <option>EDILSON DUARTE (E. M. Prof.)</option>
+                              <option>EDITH CASTRO DOS SANTOS (E. M.)</option>
+                              <option>ELENICE MARTINS (Creche E. M. Prof.ª)</option>
+                              <option>ELENITA FERREIRA DOS SANTOS ABREU (E. M. E.I. Prof.ª)</option>
+                              <option>ELICÉA DA SILVEIRA (E. M. Prof.ª)</option>
+                              <option>ELZA MARIA SANTA ROSA BERNARDO (Colégio M. Prof.ª)</option>
+                              <option>ETELVINA SANTANA DA FONSECA (E. M.)</option>
+                              <option>EVALDO SALLES (E. M.)</option>
+                              <option>FRANCISCA NAZARETH DE SOUZA (E. E. Mz.)</option>
+                              <option>FRANCISCO FRANCO (E.M.)</option>
+                              <option>IZABEL DOS SANTOS MACHADO (E.M.Prof.ª)</option>
+                              <option>JANAÍNA TELES MARTINS (E.M.E.I. Profª)</option>
+                              <option>JOÃO BESSA TEIXEIRA (E. M.)</option>
+                              <option>JOÃO EVANGELISTA DOS SANTOS (E. M.)</option>
+                              <option>JOÃO ROCHA (E. M.)</option>
+                              <option>JOÃO TRAJANO BANDEIRA CAIXEIRO (E. M. E. I. Prof.)</option>
+                              <option>JOSÉ BONIFÁCIO FERREIRA NOVELLINO (E. M.)</option>
+                              <option>JOSÉ FRANCISCO DA SILVEIRA JÚNIOR (E. M. Prof.)</option>
+                              <option>JUSTINIANO DE SOUZA (E. M.)</option>
+                              <option>LAIR DIAS GAGO PEREIRA (E. M. Prof.ª)</option>
+                              <option>LEAQUIM SCHUINDT (E. M. Vereador)</option>
+                              <option>LEOMARI GARCIA BARRETO (E. M. Prof.ª)</option>
+                              <option>LERINÉA FIGUEIREDO (E. M. Prof.ª)</option>
+                              <option>LUCELÉA RODRIGUES DA COSTA (E. M. Prof.ª)</option>
+                              <option>MANOEL MENDES DE SOUZA (E. M.)</option>
+                              <option>MÁRCIA FRANCESCONI PEREIRA (E. M. Prof.ª)</option>
+                              <option>MARIA AMÁLIA DOS SANTOS SILVEIRA (C. E. M. Prof.ª)</option>
+                              <option>MARIA APARECIDA DE AZEVEDO GALVÃO (CENAP Profª)</option>
+                              <option>MARIA DARIA SALDANHA (E. M.)</option>
+                              <option>MARIA DUTRA DA SILVEIRA (E.M.E.I)</option>
+                              <option>MARIA EMILIA DOS SANTOS CASTRO (Creche E. M.)</option>
+                              <option>MARIA HELENA BELLO DA COSTA (E.M.)</option>
+                              <option>MARIA JOSÉ BARROSO (E. M. Prof.ª)</option>
+                              <option>MARIA LEONÍDIA PARENTES FORTES MARTINS PINHEIRO (Creche Municipal)</option>
+                              <option>MARIA QUITÉRIA DA COSTA RIBEIRO (Creche M. Prof.ª)</option>
+                              <option>MARIA SALVADORA SILVA (E. M. Prof.ª)</option>
+                              <option>MARÍLIA DE TEVES MORENO (Creche E. M. Prof.ª)</option>
+                              <option>MARÍLIA PLAISANT (E. M. Prof.ª)</option>
+                              <option>MARLI CAPP (Centro Educacional M. Prof.ª)</option>
+                              <option>NEUSA AGUALUSA DA COSTA (E.M.E.I)</option>
+                              <option>NILO BATISTA (Escola Agrícola Municipal)</option>
+                              <option>OSWALDO SANTA ROSA (E. M. Prof.)</option>
+                              <option>PALMIRA BESSA DE FIGUEIREDO (E. M.)</option>
+                              <option>PATRÍCIA AZEVEDO DE ALMEIDA (E. M. Profª.)</option>
+                              <option>PAULO BURLE (E. M.)</option>
+                              <option>PEDRO JOTHA (E. M.)</option>
+                              <option>POMAR (E.M.E. I. do)</option>
+                              <option>RENATO AZEVEDO (E. M. Prof.)</option>
+                              <option>ROBINSON CARVALHO DE AZEVEDO (E. M.)</option>
+                              <option>RUI BARBOSA (Colégio Municipal)</option>
+                              <option>RUI CAPDEVILLE (E. M. Maestro)</option>
+                              <option>TALITA HERNANDES PERELLÓ (E. M.)</option>
+                              <option>TEIXEIRA E SOUZA (E. E. Mz.)</option>
+                              <option>THEMIRA PALMER (E. M.)</option>
+                              <option>TIO COTIAS (E. M. E.I.)</option>
+                              <option>TOSANA (E. E. Mz.)</option>
+                              <option>VOVO CINHA (E. M.E.I)</option>
+                              <option>VOVO OLIVIA (E. M.E. I.)</option>
+                              <option>WALDEMIRA TERESA DE JESUS (E. M.)</option>
+                              <option>WANDA M.ª NOGUEIRA GONÇALVES (Creche E. M. Prof.ª)</option>
+                              <option>WANDA PEREIRA ROQUE (E. M. Prof.ª)</option>
+                              <option>WARLEY STUDART (CENAP)</option>
+                              <option>YONE NOGUEIRA (E. M.E. I. Prof.ª)</option>
+                              <option>ZÉLIO JOTHA (E. M. Prof.)</option> 
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                    </div>
 
-                <div class="section-title">
-                    DADOS PESSOAIS
+
+
+
+                        <div class="field-group">
+                            <label for="assunto">Descrição</label>
+                            <textarea id="assunto" name="assunto"
+                                placeholder="Descreva brevemente o motivo do atendimento" required></textarea>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="data">Data</label>
+                                <input type="date" id="data" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="horarios">Horário disponível</label>
+                                <select id="horarios" required>
+                                    <option value="">Selecione o horário</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="field-group">
-
-                    <label>Nome</label>
-
-                    <input
-                        type="text"
-                        name="nome"
-                        placeholder="Seu nome"
-                        required>
-
+                <div class="form-footer">
+                    <button type="submit" id="btnAgendar" disabled>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        Agendar Atendimento
+                    </button>
                 </div>
+            </form>
 
-                <div class="field-group">
-
-                    <label>E-mail</label>
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Seu e-mail"
-                        required>
-
+            <div id="successAgenda" class="success-msg hidden">
+                <div class="success-icon icon-green">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
                 </div>
-
+                <h3>Agendamento confirmado!</h3>
+                <p>Compareça no horário selecionado com um documento de identificação.</p>
+                <button class="btn-novo" onclick="resetAgenda()">Fazer novo agendamento</button>
             </div>
 
-            <div class="form-section">
+        </div><!-- /panelAgenda -->
 
-                <div class="section-title">
-                    ATENDIMENTO
+        <!-- ════ VIEW: CANCELAMENTO ════ -->
+        <div class="view-panel" id="panelCancel">
+
+            <div class="page-title">
+                <div class="page-icon icon-red">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="15" y1="9" x2="9" y2="15" />
+                        <line x1="9" y1="9" x2="15" y2="15" />
+                    </svg>
                 </div>
-
-                <div class="field-group">
-
-                    <label>Assunto</label>
-
-                    <textarea
-                        name="assunto"
-                        placeholder="Descreva o atendimento"
-                        required></textarea>
-
+                <div>
+                    <h2>Cancelar Agendamento</h2>
+                    <p>Informe o número do protocolo para cancelar seu atendimento</p>
                 </div>
-
             </div>
 
-        </div>
+            <form id="formCancel" novalidate>
+                <div class="cancel-card">
 
-        <div class="form-footer">
+                    <div class="cancel-info">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        O número do protocolo foi enviado para o seu e-mail no momento do agendamento.
+                    </div>
 
-            <button type="submit" id="btnCarregar">
+                    <div class="field-group">
+                        <label for="protocolo">Número do Protocolo</label>
+                        <input type="text" id="protocolo" placeholder="Digite apenas os números do protocolo"
+                            inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                </svg>
+                    <button type="submit" id="btnCancelar">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="15" y1="9" x2="9" y2="15" />
+                            <line x1="9" y1="9" x2="15" y2="15" />
+                        </svg>
+                        Cancelar Agendamento
+                    </button>
 
-                Entrar na fila
+                </div>
+            </form>
 
-            </button>
+            <div id="feedbackCancel" class="feedback-cancel hidden"></div>
 
-        </div>
+        </div><!-- /panelCancel -->
 
-    </form>
+    </main>
 
-    <div id="status" class="success-msg hidden">
-
-        <div class="success-icon icon-green">
-
-            <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-
-        </div>
-
-        <h3>Solicitação enviada</h3>
-
-        <p>
-            Você entrou na fila de atendimento.
-            Aguarde receber o link da reunião por e-mail.
-        </p>
+    <script src="script.js"></script>
 
     </div>
 
