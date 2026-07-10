@@ -87,14 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ════════════════════════════════════════════════════
     // 
     // ════════════════════════════════════════════════════
-    const formAgenda = document.getElementById('formAgenda');
+    const formAtendimento = document.getElementById('formAtendimento');
     const successAgenda = document.getElementById('successAgenda');
     const selectHor = document.getElementById('horarios');
     const inputData = document.getElementById('data');
     const btnAgendar = document.getElementById('btnAgendar');
 
     // CAMPOS OBRIGATÓRIOS
-    const camposObrigatoriosAgenda = formAgenda.querySelectorAll('[required]');
+    const camposObrigatoriosAgenda = formAtendimento.querySelectorAll('[required]');
 
     // BOTÃO COMEÇA DESABILITADO
     btnAgendar.disabled = true;
@@ -206,11 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
         validarFormularioAgenda();
     });
 
-    formAgenda.addEventListener('submit', async (e) => {
+    formAtendimento.addEventListener('submit', async (e) => {
 
         e.preventDefault();
 
-        const dados = Object.fromEntries(new FormData(formAgenda));
+        const dados = Object.fromEntries(new FormData(formAtendimento));
         const inicio = selectHor.value;
 
         if (!inicio) {
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error();
             }
 
-            formAgenda.style.display = 'none';
+            formAtendimento.style.display = 'none';
             successAgenda.classList.remove('hidden');
 
         } catch {
@@ -260,9 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // RESET PARA NOVO 
     window.resetAgenda = function () {
 
-        formAgenda.reset();
+        formAtendimento.reset();
 
-        formAgenda.style.display = '';
+        formAtendimento.style.display = '';
         successAgenda.classList.add('hidden');
 
         btnAgendar.innerHTML = `
