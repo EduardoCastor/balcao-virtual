@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ════════════════════════════════════════════════════
     // CONSTANTES COMPARTILHADAS
     // ════════════════════════════════════════════════════
-    const BASE_URL = 'https://n8n.srv1352561.hstgr.cloud/webhook/balcao-virtual';
+    const BASE_URL = 'https://n8n.srv1352561.hstgr.cloud/webhook';
 
     const FERIADOS = [
         '2026-01-01', '2026-04-21', '2026-04-23', '2026-04-24',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ════════════════════════════════════════════════════
-    // AGENDAMENTO
+    // 
     // ════════════════════════════════════════════════════
     const formAgenda = document.getElementById('formAgenda');
     const successAgenda = document.getElementById('successAgenda');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
 
-            const res = await fetch(`${BASE_URL}/disponibilidade?data=${dataSel}`);
+            const res = await fetch(`${BASE_URL}/disponibilidadeonline?data=${dataSel}`);
 
             if (!res.ok) {
                 throw new Error();
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
 
-            const res = await fetch(`${BASE_URL}/agendar`, {
+            const res = await fetch(`${BASE_URL}/agendamentoonline`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // RESET PARA NOVO AGENDAMENTO
+    // RESET PARA NOVO 
     window.resetAgenda = function () {
 
         formAgenda.reset();
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(validarFormularioAgenda, 300);
     };
 
-    // INICIALIZAÇÃO AGENDAMENTO
+    // INICIALIZAÇÃO 
     configurarCalendario();
     carregarHorarios();
     validarFormularioAgenda();
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <line x1="15" y1="9" x2="9" y2="15"/>
                     <line x1="9" y1="9" x2="15" y2="15"/>
                 </svg>
-                Cancelar Agendamento
+                Cancelar 
             `;
         }
     });
