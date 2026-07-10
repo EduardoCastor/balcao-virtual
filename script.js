@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnAgendar = document.getElementById('btnAgendar');
    // ESCOLA → E-MAIL
 const selectEscola = document.getElementById('nome_escola');
-const emailEscola = document.getElementById('email_escola');
+const emailEscola = document.getElementById('email');
 
 const emailsEscolas = {
     "ACHILLES ALMEIDA BARRETO (E. M. Prof.)": "empachillesbarreto@semecabofrio.rj.gov.br",
